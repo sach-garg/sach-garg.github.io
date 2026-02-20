@@ -25,14 +25,14 @@
     <div class="topbar">
       <div class="nav-left">
         <a class="pill" href="#about">About</a>
-        <a class="pill" href="#interests">Research Interests and Motivation</a>
+        <a class="pill" href="#interests">Research Motivation</a>
         <a class="pill" href="#publications">Publications</a>
         <a class="pill" href="#teaching">Teaching</a>
       </div>
 
       <div class="nav-right">
         <a class="pill" href="https://scholar.google.com/citations?user=WivQcbEAAAAJ&hl=en" target="_blank">Google Scholar</a>
-       <a class="pill" href="#" onclick="toggleEmail(event)">Email</a>
+       <a class="pill" href="#" onclick="toggleEmail(event)">Contact</a>
       </div>
     </div>
 
@@ -54,7 +54,7 @@ My research broadly focuses on developing randomized algorithms for large scale 
 
 <section id="interests" class="section alt">
   <div class="container">
-    <h2>Research Interests and Motivation</h2>
+    <h2>Research Motivation</h2>
 
     <p>
     The rapid growth of AI and modern computing has created a setting in which traditional statistical methods such as linear regression, as well as modern transformer-based approaches, are often not fully optimized for efficiency on contemporary computing platforms. This challenge is particularly pronounced in distributed and space-constrained computing environments, where existing methods can incur prohibitive time and memory costs. Moreover, these methods frequently fail to deliver the expected improvements in training efficiency when deployed on modern hardware accelerators. These limitations motivate the development of new algorithmic foundations that are both statistically efficient and computationally scalable. My research addresses this fundamental challenge of balancing statistical accuracy with computational complexity in large-scale machine learning via unlocking more efficient utilization of modern hardware accelerators, resulting in significantly faster training times.
@@ -127,12 +127,12 @@ My research broadly focuses on developing randomized algorithms for large scale 
 
     <div class="pub">
       <b>Algorithms for Data Science</b><br>
-      <span class="meta">Graduate Student Instructor — WN 2023, WN 2024, FA 2024</span>
+      <span class="meta">Graduate Student Instructor — Winter 2023, Winter 2024, Fall 2024</span>
     </div>
 
     <div class="pub">
       <b>Foundations of Computer Science</b><br>
-      <span class="meta">Graduate Student Instructor — WN 2026</span>
+      <span class="meta">Graduate Student Instructor — Winter 2026</span>
     </div>
 
   </div>
@@ -146,13 +146,25 @@ My research broadly focuses on developing randomized algorithms for large scale 
 
 </main>
 <!-- Email popup -->
-<!-- Email popup -->
+<!-- CONTACT POPUP -->
 <div id="emailBox" class="email-box">
+
+  
+
   <div class="email-text">sachg@umich.edu</div>
 
   <div class="email-actions">
-    <button class="copy-btn" onclick="copyEmail()">Copy email</button>
-    <a class="send-btn" href="mailto:sachg@umich.edu">Send email</a>
+    <button class="copy-btn" onclick="copyEmail()">Copy</button>
+
+    <a class="send-btn" href="mailto:sachg@umich.edu">Email</a>
+
+    <!-- LinkedIn icon -->
+    <a class="linkedin-icon" href="https://www.linkedin.com/in/sachingarg95/" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" viewBox="0 0 24 24">
+        <path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.54a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.66H9.37V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.27 2.37 4.27 5.46v6.28z"/>
+      </svg>
+    </a>
+
   </div>
 </div>
 
@@ -167,7 +179,7 @@ function copyEmail(){
   navigator.clipboard.writeText("sachg@umich.edu");
   const btn = document.querySelector(".copy-btn");
   btn.innerText = "Copied!";
-  setTimeout(()=>{btn.innerText="Copy email"},1500);
+  setTimeout(()=>{btn.innerText="Copy"},1500);
 }
 </script>
 </body>

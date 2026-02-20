@@ -185,7 +185,13 @@ html{
   font-size: 14px;
 }
 
-/* Email popup (copy + send) */
+/* Name highlight in author list */
+.myname{
+  color:#4a78c2;   /* soft academic blue */
+  font-weight:500; /* not too bold */
+}
+
+/* Email popup */
 .email-box{
   position: fixed;
   top: 95px;
@@ -200,6 +206,14 @@ html{
   min-width: 220px;
 }
 
+/* Popup title */
+.contact-title{
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:8px;
+  color:#444;
+}
+
 .email-text{
   font-size:15px;
   margin-bottom:12px;
@@ -207,9 +221,11 @@ html{
   font-weight:500;
 }
 
+/* Buttons + icon row */
 .email-actions{
   display:flex;
   gap:10px;
+  align-items:center;
 }
 
 .copy-btn{
@@ -236,6 +252,28 @@ html{
 }
 .send-btn:hover{
   background:#eaeaea;
+  text-decoration:none;
+}
+
+/* LinkedIn icon button */
+.linkedin-icon{
+  width:34px;
+  height:34px;
+  background:#0a66c2;
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  flex: 0 0 auto;
+}
+
+.linkedin-icon svg{
+  display:block;
+}
+
+.linkedin-icon:hover{
+  opacity:0.9;
   text-decoration:none;
 }
 
@@ -266,9 +304,4 @@ html{
   .research-tags{
     justify-content: flex-start; /* more readable on mobile */
   }
-}
-
-.myname{
-  color:#4a78c2;   /* soft academic blue */
-  font-weight:500; /* not too bold */
 }
