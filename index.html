@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sachin Garg</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container">
+
+    <div class="header-flex">
+      <img src="photo.jpg" class="profile" alt="Sachin Garg">
+
+      <div>
+        <h1>Sachin Garg</h1>
+        <p class="subtitle">PhD Candidate — Computer Science & Engineering</p>
+      </div>
+    </div>
+
+    <!-- Navigation row -->
+    <div class="topbar">
+      <div class="nav-left">
+        <a class="pill" href="#about">About</a>
+        <a class="pill" href="#interests">Research Interests and Motivation</a>
+        <a class="pill" href="#publications">Publications</a>
+        <a class="pill" href="#teaching">Teaching</a>
+      </div>
+
+      <div class="nav-right">
+        <a class="pill" href="https://scholar.google.com/citations?user=WivQcbEAAAAJ&hl=en" target="_blank">Google Scholar</a>
+       <a class="pill" href="#" onclick="toggleEmail(event)">Email</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+<section id="about" class="section">
+  <div class="container">
+    <h2>About</h2>
+    <p>
+I am a fourth-year PhD student in the Computer Science and Engineering (CSE) Division at the University of Michigan advised by <a href="https://web.eecs.umich.edu/~derezin/">Michał Dereziński</a>. Prior to joining CSE, I completed a Master’s degree in Mathematics at the Indian Institute of Technology (IIT) Bombay, and subsequently worked in the banking industry for three years on credit risk modeling.
+
+My research broadly focuses on developing randomized algorithms for large scale machine learning and optimization. In particular, I am interested in algorithms that are scalable, parallelizable, and capable of leveraging modern, massively distributed computing infrastructures. The theoretical foundations of my work lie in randomized numerical linear algebra (matrix sketching) and high-dimensional probability.
+    </p>
+  </div>
+</section>
+
+<section id="interests" class="section alt">
+  <div class="container">
+    <h2>Research Interests and Motivation</h2>
+
+    <p>
+    The rapid growth of AI and modern computing has created a setting in which traditional statistical methods such as linear regression, as well as modern transformer-based approaches, are often not fully optimized for efficiency on contemporary computing platforms. This challenge is particularly pronounced in distributed and space-constrained computing environments, where existing methods can incur prohibitive time and memory costs. Moreover, these methods frequently fail to deliver the expected improvements in training efficiency when deployed on modern hardware accelerators. These limitations motivate the development of new algorithmic foundations that are both statistically efficient and computationally scalable. My research addresses this fundamental challenge of balancing statistical accuracy with computational complexity in large-scale machine learning via unlocking more efficient utilization of modern hardware accelerators, resulting in significantly faster training times.
+    </p>
+
+   <p class="keywords-label">Keywords:</p>
+
+   <div class="research-tags">
+  <span>Distributed Optimization</span>
+  <span>Matrix Approximation</span>
+  <span>Randomized Numerical Linear Algebra</span>
+</div>
+
+  </div>
+</section>
+
+<section id="publications" class="section">
+  <div class="container">
+    <h2>Publications</h2>
+
+    <div class="pub">
+      <b>
+      Second-order information promotes mini-batch robustness in variance-reduced gradients
+      <a href="https://arxiv.org/abs/2404.14758" target="_blank" class="paper-icon">↗</a>
+      </b><br>
+      <span class="meta"><span class="myname">S. Garg</span>, A. Berahas, M. Dereziński</span><br>
+      <span class="meta">Journal of Machine Learning Research (JMLR), 2026</span>
+    </div>
+
+    <div class="pub">
+      <b>
+      Faster Low-Rank Approximation and Kernel Ridge Regression via the Block-Nyström Method
+      <a href="https://arxiv.org/abs/2506.17556" target="_blank" class="paper-icon">↗</a>
+      </b><br>
+      <span class="meta"><span class="myname">S. Garg</span>, M. Dereziński</span><br>
+      <span class="meta">Conference on Learning Theory (COLT), 2025</span>
+    </div>
+
+    <div class="pub">
+      <b>
+      Turbocharging Gaussian Process Inference with Approximate Sketch-and-Project
+      <a href="https://arxiv.org/abs/2505.13723" target="_blank" class="paper-icon">↗</a>
+      </b><br>
+      <span class="meta">P. Rathore, Z. Frangella, <span class="myname">S. Garg</span>, S. Fazliani, M. Dereziński, M. Udell</span><br>
+      <span class="meta">Advances in Neural Information Processing Systems (NeurIPS), 2025</span>
+    </div>
+
+    <div class="pub">
+      <b>
+      Distributed Least Squares in Small Space via Sketching and Bias Reduction
+      <a href="https://arxiv.org/abs/2405.05343" target="_blank" class="paper-icon">↗</a>
+      </b><br>
+      <span class="meta"><span class="myname">S. Garg</span>, K. Tan, M. Dereziński</span><br>
+      <span class="meta">Advances in Neural Information Processing Systems (NeurIPS), 2024</span>
+    </div>
+<!--
+
+    <p style="margin-top:18px;">
+      Full list on 
+      <a href="https://scholar.google.com/citations?user=WivQcbEAAAAJ&hl=en" target="_blank">
+      Google Scholar</a>
+    </p>
+-->
+  </div>
+</section>
+
+<section id="teaching" class="section alt">
+  <div class="container">
+    <h2>Teaching</h2>
+
+    <div class="pub">
+      <b>Algorithms for Data Science</b><br>
+      <span class="meta">Graduate Student Instructor — WN 2023, WN 2024, FA 2024</span>
+    </div>
+
+    <div class="pub">
+      <b>Foundations of Computer Science</b><br>
+      <span class="meta">Graduate Student Instructor — WN 2026</span>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    © 2026 Sachin Garg
+  </div>
+</footer>
+
+</main>
+<!-- Email popup -->
+<!-- Email popup -->
+<div id="emailBox" class="email-box">
+  <div class="email-text">sachg@umich.edu</div>
+
+  <div class="email-actions">
+    <button class="copy-btn" onclick="copyEmail()">Copy email</button>
+    <a class="send-btn" href="mailto:sachg@umich.edu">Send email</a>
+  </div>
+</div>
+
+<script>
+function toggleEmail(event){
+  event.preventDefault();
+  const box = document.getElementById("emailBox");
+  box.style.display = box.style.display === "block" ? "none" : "block";
+}
+
+function copyEmail(){
+  navigator.clipboard.writeText("sachg@umich.edu");
+  const btn = document.querySelector(".copy-btn");
+  btn.innerText = "Copied!";
+  setTimeout(()=>{btn.innerText="Copy email"},1500);
+}
+</script>
+</body>
+</html>
