@@ -23,16 +23,15 @@
 
     <div class="topbar">
       <div class="nav-left">
-        <a class="pill" href="#about">About</a>
-        <a class="pill" href="#interests">Research Motivation</a>
-        <a class="pill" href="#publications">Publications</a>
-        <a class="pill" href="#preprints">Preprints</a>
-        <a class="pill" href="#teaching">Teaching</a>
+        <button type="button" class="pill tab-button active-pill" data-section="about">About</button>
+        <button type="button" class="pill tab-button" data-section="publications">Publications</button>
+        <button type="button" class="pill tab-button" data-section="teaching">Teaching</button>
       </div>
 
       <div class="nav-right">
         <a class="pill" href="https://scholar.google.com/citations?user=WivQcbEAAAAJ&hl=en" target="_blank">Google Scholar</a>
-        <a class="pill" href="#" onclick="toggleEmail(event)">Contact</a>
+          <a class="pill" href="https://github.com/sach-garg" target="_blank">GitHub</a>
+        <a class="pill" href="#" id="contactButton">Contact</a>
       </div>
     </div>
 
@@ -41,23 +40,45 @@
 
 <main>
 
-<section id="about" class="section">
+<section id="about" class="section page-section active-section">
   <div class="container">
     <h2>About</h2>
-    <p>
-I am a fourth-year PhD student in the Computer Science and Engineering (CSE) Division at the University of Michigan advised by <a href="https://web.eecs.umich.edu/~derezin/">Michał Dereziński</a>. Prior to joining CSE, I completed a Master’s degree in Mathematics at the Indian Institute of Technology (IIT) Bombay, and subsequently worked in the banking industry for three years on credit risk modeling.
 
-My research broadly focuses on developing randomized algorithms for large scale machine learning and optimization. In particular, I am interested in algorithms that are scalable, parallelizable, and capable of leveraging modern, massively distributed computing infrastructures. The theoretical foundations of my work lie in randomized numerical linear algebra, matrix sketching, and high-dimensional probability.
+    <p>
+      I am a final-year PhD student in the Computer Science and Engineering (CSE) Division at the University of Michigan advised by
+      <a href="https://web.eecs.umich.edu/~derezin/" target="_blank">Michał Dereziński</a>.
+      Prior to joining CSE, I completed a Master’s degree in Mathematics at the Indian Institute of Technology (IIT) Bombay, and worked in the banking industry for three years.
+      I develop scalable machine learning algorithms for distributed and memory-constrained settings, with the goal of preserving statistical accuracy while reducing communication, computation, and memory costs.
+      A central theme of my work is identifying model compression opportunities and designing distributed optimization methods that efficiently harness the compute capabilities of modern hardware accelerators.
+      The theoretical foundations of my work lie in randomized numerical linear algebra, random matrix theory, and high-dimensional statistics.
     </p>
+
+    <div class="job-market-box">
+      I am on the academic job market and currently looking for postdoctoral opportunities.
+    </div>
+
+    <!--
+    <p>
+      My research broadly focuses on developing randomized algorithms for large scale machine learning and optimization.
+      In particular, I am interested in algorithms that are scalable, parallelizable, and capable of leveraging modern, massively distributed computing infrastructures.
+      The theoretical foundations of my work lie in randomized numerical linear algebra, matrix sketching, and high-dimensional probability.
+    </p>
+    -->
+
   </div>
 </section>
 
-<section id="interests" class="section alt">
+<!--
+<section id="interests" class="section page-section">
   <div class="container">
     <h2>Research Motivation</h2>
 
     <p>
-The rapid growth of AI and modern computing has created a setting in which traditional statistical methods such as linear regression, as well as modern transformer-based approaches, are often not fully optimized for efficiency on contemporary computing platforms. This challenge is particularly pronounced in distributed and space-constrained computing environments, where existing methods can incur prohibitive time and memory costs. Moreover, these methods frequently fail to deliver the expected improvements in training efficiency when deployed on modern hardware accelerators. These limitations motivate the development of new algorithmic foundations that are both statistically efficient and computationally scalable. My research addresses this fundamental challenge of balancing statistical accuracy with computational complexity in large-scale machine learning via unlocking more efficient utilization of modern hardware accelerators, resulting in significantly faster training times.
+      The rapid growth of AI and modern computing has created a setting in which traditional statistical methods such as linear regression, as well as modern transformer-based approaches, are often not fully optimized for efficiency on contemporary computing platforms.
+      This challenge is particularly pronounced in distributed and space-constrained computing environments, where existing methods can incur prohibitive time and memory costs.
+      Moreover, these methods frequently fail to deliver the expected improvements in training efficiency when deployed on modern hardware accelerators.
+      These limitations motivate the development of new algorithmic foundations that are both statistically efficient and computationally scalable.
+      My research addresses this fundamental challenge of balancing statistical accuracy with computational complexity in large-scale machine learning via unlocking more efficient utilization of modern hardware accelerators, resulting in significantly faster training times.
     </p>
 
     <p class="keywords-label">Keywords:</p>
@@ -70,87 +91,106 @@ The rapid growth of AI and modern computing has created a setting in which tradi
 
   </div>
 </section>
+-->
 
-<section id="publications" class="section">
+<section id="publications" class="section page-section">
   <div class="container">
     <h2>Publications</h2>
 
     <div class="pub">
-      <b>
+      <div class="pub-title">
+        Perfect Parallelization in Mini-Batch SGD with Classical Momentum Acceleration
+        <a href="https://arxiv.org/abs/2605.18609v1" target="_blank" class="paper-icon">↗</a>
+      </div>
+      <div class="pub-meta">
+        <span class="myname">S. Garg</span>, M. Dereziński. To appear in NeurIPS, 2026.
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">
+        Debiasing Random Oblique Projections for Subsampled OLS and Fast CUR in High Dimensions
+        <a href="https://arxiv.org/abs/2605.24955" target="_blank" class="paper-icon">↗</a>
+      </div>
+      <div class="pub-meta">
+        C. Niu, <span class="myname">S. Garg</span>, M. Dereziński, Z. Liao. To appear in NeurIPS, 2026.
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">
         Second-order information promotes mini-batch robustness in variance-reduced gradients
         <a href="https://arxiv.org/abs/2404.14758" target="_blank" class="paper-icon">↗</a>
-      </b><br>
-      <span class="meta"><span class="myname">S. Garg</span>, A. Berahas, M. Dereziński</span><br>
-      <span class="meta">Journal of Machine Learning Research (JMLR), 2026</span>
+      </div>
+      <div class="pub-meta">
+        <span class="myname">S. Garg</span>, A. Berahas, M. Dereziński. Journal of Machine Learning Research, 2026.
+      </div>
     </div>
 
     <div class="pub">
-      <b>
+      <div class="pub-title">
         Faster Low-Rank Approximation and Kernel Ridge Regression via the Block-Nyström Method
         <a href="https://arxiv.org/abs/2506.17556" target="_blank" class="paper-icon">↗</a>
-      </b><br>
-      <span class="meta"><span class="myname">S. Garg</span>, M. Dereziński</span><br>
-      <span class="meta">Conference on Learning Theory (COLT), 2025</span>
+      </div>
+      <div class="pub-meta">
+        <span class="myname">S. Garg</span>, M. Dereziński. Conference on Learning Theory, 2025.
+      </div>
     </div>
 
     <div class="pub">
-      <b>
+      <div class="pub-title">
         Turbocharging Gaussian Process Inference with Approximate Sketch-and-Project
         <a href="https://arxiv.org/abs/2505.13723" target="_blank" class="paper-icon">↗</a>
-      </b><br>
-      <span class="meta">P. Rathore, Z. Frangella, <span class="myname">S. Garg</span>, S. Fazliani, M. Dereziński, M. Udell</span><br>
-      <span class="meta">Advances in Neural Information Processing Systems (NeurIPS), 2025</span>
+      </div>
+      <div class="pub-meta">
+        P. Rathore, Z. Frangella, <span class="myname">S. Garg</span>, S. Fazliani, M. Dereziński, M. Udell. NeurIPS, 2025.
+      </div>
     </div>
 
     <div class="pub">
-      <b>
+      <div class="pub-title">
         Distributed Least Squares in Small Space via Sketching and Bias Reduction
         <a href="https://arxiv.org/abs/2405.05343" target="_blank" class="paper-icon">↗</a>
-      </b><br>
-      <span class="meta"><span class="myname">S. Garg</span>, K. Tan, M. Dereziński</span><br>
-      <span class="meta">Advances in Neural Information Processing Systems (NeurIPS), 2024</span>
+      </div>
+      <div class="pub-meta">
+        <span class="myname">S. Garg</span>, K. Tan, M. Dereziński. NeurIPS, 2024.
+      </div>
     </div>
 
   </div>
 </section>
 
-<section id="preprints" class="section alt">
+<!--
+<section id="preprints" class="section page-section">
   <div class="container">
     <h2>Preprints</h2>
 
     <div class="pub">
-      <b>
-        Perfect Parallelization in Mini-Batch SGD with Classical Momentum Acceleration
-        <a href="https://arxiv.org/html/2605.18609v1" target="_blank" class="paper-icon">↗</a>
-      </b><br>
-      <span class="meta"><span class="myname">S. Garg</span>, M. Dereziński</span><br>
-      <span class="meta">arXiv preprint, 2026</span>
-    </div>
-
-    <div class="pub">
-      <b>
-        Debiasing Random Oblique Projections for Subsampled OLS and Fast CUR in High Dimensions
-        <a href="https://arxiv.org/abs/2605.24955" target="_blank" class="paper-icon">↗</a>
-      </b><br>
-      <span class="meta">C. Niu, <span class="myname">S. Garg</span>, M. Dereziński, Z. Liao</span><br>
-      <span class="meta">arXiv preprint, 2026</span>
+      <div class="pub-title">
+        Add future preprint title here
+        <a href="#" target="_blank" class="paper-icon">↗</a>
+      </div>
+      <div class="pub-meta">
+        Authors. arXiv preprint, year.
+      </div>
     </div>
 
   </div>
 </section>
+-->
 
-<section id="teaching" class="section">
+<section id="teaching" class="section page-section">
   <div class="container">
     <h2>Teaching</h2>
 
     <div class="pub">
-      <b>Algorithms for Data Science</b><br>
-      <span class="meta">Graduate Student Instructor — Winter 2023, Winter 2024, Fall 2024</span>
+      <div class="pub-title">Algorithms for Data Science</div>
+      <div class="pub-meta">Graduate Student Instructor — Winter 2023, Winter 2024, Fall 2024</div>
     </div>
 
     <div class="pub">
-      <b>Foundations of Computer Science</b><br>
-      <span class="meta">Graduate Student Instructor — Winter 2026</span>
+      <div class="pub-title">Foundations of Computer Science</div>
+      <div class="pub-meta">Graduate Student Instructor — Winter 2026</div>
     </div>
 
   </div>
@@ -168,11 +208,11 @@ The rapid growth of AI and modern computing has created a setting in which tradi
   <div class="email-text">sachg@umich.edu</div>
 
   <div class="email-actions">
-    <button class="copy-btn" onclick="copyEmail()">Copy</button>
+    <button type="button" class="copy-btn" id="copyEmailButton">Copy</button>
 
     <a class="send-btn" href="mailto:sachg@umich.edu">Email</a>
 
-    <a class="linkedin-icon" href="https://www.linkedin.com/in/sachingarg95/" target="_blank">
+    <a class="linkedin-icon" href="https://www.linkedin.com/in/sachingarg95/" target="_blank" aria-label="LinkedIn">
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" viewBox="0 0 24 24">
         <path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.54a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.66H9.37V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.27 2.37 4.27 5.46v6.28z"/>
       </svg>
@@ -181,18 +221,61 @@ The rapid growth of AI and modern computing has created a setting in which tradi
 </div>
 
 <script>
-function toggleEmail(event){
-  event.preventDefault();
-  const box = document.getElementById("emailBox");
-  box.style.display = box.style.display === "block" ? "none" : "block";
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const tabButtons = document.querySelectorAll(".tab-button");
+  const pageSections = document.querySelectorAll(".page-section");
+  const contactButton = document.getElementById("contactButton");
+  const emailBox = document.getElementById("emailBox");
+  const copyEmailButton = document.getElementById("copyEmailButton");
 
-function copyEmail(){
-  navigator.clipboard.writeText("sachg@umich.edu");
-  const btn = document.querySelector(".copy-btn");
-  btn.innerText = "Copied!";
-  setTimeout(() => { btn.innerText = "Copy"; }, 1500);
-}
+  tabButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const targetId = button.getAttribute("data-section");
+      const targetSection = document.getElementById(targetId);
+
+      if (!targetSection) {
+        return;
+      }
+
+      pageSections.forEach(function (section) {
+        section.classList.remove("active-section");
+      });
+
+      targetSection.classList.add("active-section");
+
+      tabButtons.forEach(function (btn) {
+        btn.classList.remove("active-pill");
+      });
+
+      button.classList.add("active-pill");
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  });
+
+  contactButton.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    if (emailBox.style.display === "block") {
+      emailBox.style.display = "none";
+    } else {
+      emailBox.style.display = "block";
+    }
+  });
+
+  copyEmailButton.addEventListener("click", function () {
+    navigator.clipboard.writeText("sachg@umich.edu");
+
+    copyEmailButton.innerText = "Copied!";
+
+    setTimeout(function () {
+      copyEmailButton.innerText = "Copy";
+    }, 1500);
+  });
+});
 </script>
 
 </body>
